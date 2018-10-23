@@ -1,0 +1,60 @@
+.body{
+    background-color:rgb(105, 159, 230);
+    width:70%;
+    height:40vh;
+    
+}
+input{
+    background-color: rgb(238, 238, 238);
+}
+span{
+    margin-left: 50px;
+    font-style: italic;
+    font-weight:bold;
+    display: block;
+    text-align: center;
+    margin: 0 40px 10px;
+    color: rgb(238, 238, 238)
+}
+.header{
+    background-color:rgb(105, 159, 230);
+    margin-top: 30px;
+    width:70%;
+}
+h1{
+    text-align: center;
+    color: azure;
+}
+.row{
+padding-top: 10px
+}
+a{
+    align-self: center;
+    color: azure;
+}
+  
+.vertical-center {
+    display: table;
+    margin: 0 auto;
+  }
+  button{
+      width: 200px;
+      background-color: white;
+      color: skyblue;
+
+  }
+  ::-webkit-input-placeholder {
+    text-align: center;
+ }
+ 
+ :-moz-placeholder { /* Firefox 18- */
+    text-align: center;  
+ }
+ 
+ ::-moz-placeholder {  /* Firefox 19+ */
+    text-align: center;  
+ }
+ 
+ :-ms-input-placeholder {  
+    text-align: center; 
+ }
