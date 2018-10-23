@@ -9,7 +9,7 @@ export class Compotition {
     public set name(v: string) {
         this._name = v;
     }
-    // Id1
+    // Id
     private _id: number;
     public get id(): number {
         return this._id;
