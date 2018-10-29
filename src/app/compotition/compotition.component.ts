@@ -1,20 +1,19 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { interval, timer } from 'rxjs';
 import { Router } from '@angular/router';
-import { CompotitionMock } from './competittionMock';
-import { Compotition } from '../competition';
+import { CompetitionMock } from './competittionMock';
+import { Competition } from '../competition';
 
 
 @Component({
   selector: 'app-compotition',
-  templateUrl: './compotition.component.html',
-  styleUrls: ['./compotition.component.css']
+  templateUrl: './compotition.component.html'
 })
 export class CompotitionComponent implements OnInit {
-  compotition: Compotition;
+ compotition: Competition;
   leftTime: string;
-  constructor(private router: Router, private mock: CompotitionMock) {
-    mock = new CompotitionMock();
+  constructor(private router: Router, private mock: CompetitionMock) {
+    mock = new CompetitionMock();
     this.compotition = mock.compotitionGet();
   }
 
@@ -36,9 +35,9 @@ export class CompotitionComponent implements OnInit {
     });
   }
   register() {
-    // this.router.navigate(["compotition-register"]).then(x => {
-    //   console.log(x);
-    // });
+    this.router.navigate(['compotition-register']).then(x => {
+      console.log(x);
+    });
   }
 
 }

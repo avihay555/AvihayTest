@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "photo-competition": {
+    "phoComp": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/photo-competition",
+            "outputPath": "dist/phoComp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,10 +23,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css","node_modules/bootstrap/dist/css/bootstrap.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              
             ],
-            "scripts": ["node_modules/jquery/dist/jquery.js",
-              "node_modules/bootstrap/dist/js/bootstrap.js"]
+            "scripts": [ "node_modules/bootstrap/dist/js/bootstrap.min.js"]
           },
           "configurations": {
             "production": {
@@ -44,25 +45,32 @@
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "photo-competition:build"
+            "browserTarget": "phoComp:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "photo-competition:build:production"
+              "browserTarget": "phoComp:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "photo-competition:build"
+            "browserTarget": "phoComp:build"
           }
         },
         "test": {
@@ -73,12 +81,9 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/styles.css","node_modules/bootstrap/dist/css/bootstrap.css"
-            ],
-            "scripts": ["node_modules/jquery/dist/jquery.js",
-              "node_modules/bootstrap/dist/js/bootstrap.js"],
-           
-            
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css" ],
+            "scripts": [ "node_modules/bootstrap/dist/js/bootstrap.min.js"],
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -99,19 +104,20 @@
         }
       }
     },
-    "photo-competition-e2e": {
+    "phoComp-e2e": {
       "root": "e2e/",
       "projectType": "application",
+      "prefix": "",
       "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "photo-competition:serve"
+            "devServerTarget": "phoComp:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "photo-competition:serve:production"
+              "devServerTarget": "phoComp:serve:production"
             }
           }
         },
@@ -127,5 +133,5 @@
       }
     }
   },
-  "defaultProject": "photo-competition"
+  "defaultProject": "phoComp"
 }

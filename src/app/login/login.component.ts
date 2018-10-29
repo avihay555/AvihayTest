@@ -1,6 +1,6 @@
 import { Component, OnInit, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { LoginUser } from 'src/app/user';
+import { LoginUser } from '../loginUser';
 import { empty } from 'rxjs/internal/observable/empty';
 @Component({
   selector: 'app-login',

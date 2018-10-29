@@ -1,4 +1,6 @@
-class compotitionRegister {
+import { PhotoCompetition } from '../compotition/photoCompotition';
+
+class CompetitionRegister {
 
     private _date: Date;
     public get date(): Date {
@@ -25,15 +27,15 @@ class compotitionRegister {
     }
 
 
-  
-  private _photoCompotitionId : photoCompotition;
-  public get photoCompotitionId() : photoCompotition {
-      return this._photoCompotitionId;
-  }
-  public set photoCompotitionId(v : photoCompotition) {
-      this._photoCompotitionId = v;
-  }
-  
+
+    private _photoCompotitionId: PhotoCompetition;
+    public get photoCompotitionId(): PhotoCompetition {
+        return this._photoCompotitionId;
+    }
+    public set photoCompotitionId(v: PhotoCompetition) {
+        this._photoCompotitionId = v;
+    }
+
 
 
     private _isSuccessRegister: boolean;
@@ -43,6 +45,4 @@ class compotitionRegister {
     public set isSuccessRegister(v: boolean) {
         this._isSuccessRegister = v;
     }
-
-
-} 
+}

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Compotition } from '../competition';
+import { Competition } from '../competition';
 
 @Component({
   selector: 'app-compotitions',
@@ -7,7 +7,7 @@ import { Compotition } from '../competition';
   styleUrls: ['./compotitions.component.css']
 })
 export class CompotitionsComponent implements OnInit {
-compotitions: Set<Compotition>;
+compotitions: Set<Competition>;
   constructor() {
     // this.compotitionsss = CompotionsGet
    }

@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { CompetitionDetails } from './competition-details';
-import 'rxjs/add/observable/of';
 import { Observable, of } from 'rxjs';
 import { Competition } from './competition';
 import { User } from './user';

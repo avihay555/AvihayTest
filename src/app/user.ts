@@ -1,4 +1,4 @@
-import { PhotoCompotition } from './compotition/photoCompotition';
+import { PhotoCompetition } from './compotition/photoCompotition';
 export class User {
     public constructor(init?: Partial<User>) {
         Object.assign(this, init);
@@ -19,11 +19,11 @@ export class User {
         this._id = v;
     }
 
-    private _compotitionPhoto: PhotoCompotition;
-    public get compotitionPhoto(): PhotoCompotition {
+    private _compotitionPhoto: PhotoCompetition;
+    public get compotitionPhoto(): PhotoCompetition {
         return this._compotitionPhoto;
     }
-    public set compotitionPhoto(v: PhotoCompotition) {
+    public set compotitionPhoto(v: PhotoCompetition) {
         this._compotitionPhoto = v;
     }
 
