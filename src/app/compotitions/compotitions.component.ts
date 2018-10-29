@@ -7,7 +7,7 @@ import { Compotition } from '../compotition/compotition';
   styleUrls: ['./compotitions.component.css']
 })
 export class CompotitionsComponent implements OnInit {
-compotitions:Set<Compotition>
+compotitions: Set<Compotition>;
   constructor() {
     // this.compotitionsss = CompotionsGet
    }

@@ -13,14 +13,14 @@ import { Compotition } from './compotition';
 export class CompotitionComponent implements OnInit {
   compotition: Compotition;
   leftTime: string;
-  constructor(private router: Router,private mock:CompotitionMock) {
-     mock = new CompotitionMock();
-     this.compotition = mock.compotitionGet();
+  constructor(private router: Router, private mock: CompotitionMock) {
+    mock = new CompotitionMock();
+    this.compotition = mock.compotitionGet();
   }
 
   @Input()
   set compotitionId(_compotitionId: number) {
-    //getCompotiton(compotitionId)
+    // getCompotiton(compotitionId)
   }
   ngOnInit() {
     this.setTimer();
@@ -32,7 +32,7 @@ export class CompotitionComponent implements OnInit {
       const leftHour = this.compotition.endTime.getHours() - d.getHours();
       const leftMinu = this.compotition.endTime.getMinutes() - d.getMinutes();
       const leftSec = this.compotition.endTime.getSeconds() - d.getSeconds();
-      let leftTime = `Left Time: ${leftDay} Days, ${leftHour} Hours, ${leftMinu} Minuets, ${leftSec} Second`
+      this.leftTime = `Left Time: ${leftDay} Days, ${leftHour} Hours, ${leftMinu} Minuets, ${leftSec} Second`;
     });
   }
   register() {
