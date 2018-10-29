@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Compotition } from '../compotition/compotition';
+import { Compotition } from '../competition';
 
 @Component({
   selector: 'app-compotitions',

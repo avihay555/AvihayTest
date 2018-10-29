@@ -1,4 +1,7 @@
-export class PhotoCompotition {
+export class PhotoCompetition {
+    public constructor(init?: Partial<PhotoCompetition>) {
+        Object.assign(this, init);
+    }
     private _id: number;
     public get id(): number {
         return this._id;
@@ -15,15 +18,11 @@ export class PhotoCompotition {
         this._photo = v;
     }
 
-
     private _numberOfLikes: number;
     public get numberOfLikes(): number {
         return this._numberOfLikes;
     }
-
     public set numberOfLikes(v: number) {
         this._numberOfLikes = v;
     }
-
-
 }

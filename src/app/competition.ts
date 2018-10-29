@@ -1,6 +1,6 @@
-export class Compotition {
-    constructor() {
-
+export class Competition {
+    public constructor(init?: Partial<Competition>) {
+        Object.assign(this, init);
     }
     private _name: string;
     public get name(): string {
@@ -40,15 +40,6 @@ export class Compotition {
     }
     public set title(v: string) {
         this._title = v;
-    }
-
-
-    private _compotitionRegisters: Set<compotitionRegister>;
-    public get compotitionRegisters(): Set<compotitionRegister> {
-        return this._compotitionRegisters;
-    }
-    public set compotitionRegisters(v: Set<compotitionRegister>) {
-        this._compotitionRegisters = v;
     }
 
 }

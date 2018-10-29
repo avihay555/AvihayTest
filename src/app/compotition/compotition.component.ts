@@ -1,8 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { interval, timer } from 'rxjs';
 import { Router } from '@angular/router';
-import { CompotitionMock } from './compotittionMock';
-import { Compotition } from './compotition';
+import { CompotitionMock } from './competittionMock';
+import { Compotition } from '../competition';
 
 
 @Component({

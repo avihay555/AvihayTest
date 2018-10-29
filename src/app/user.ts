@@ -1,6 +1,8 @@
 import { PhotoCompotition } from './compotition/photoCompotition';
 export class User {
-
+    public constructor(init?: Partial<User>) {
+        Object.assign(this, init);
+    }
     private _name: string;
     public get name(): string {
         return this._name;

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, Route, Routes, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { CompotitionDetailsMockServiceService } from '../compotition-details-mock-service.service';
 
 @Component({
   selector: 'app-compotition-details',
@@ -9,12 +10,15 @@ import { Router, Route, Routes, ActivatedRoute } from '@angular/router';
 export class CompotitionDetailsComponent implements OnInit {
 
   compotitionId: number;
-  constructor(private rout: ActivatedRoute) {
+
+  constructor(private rout: ActivatedRoute, private mockService: CompotitionDetailsMockServiceService) {
   }
 
   ngOnInit() {
     this.compotitionId = +this.rout.snapshot.paramMap.get('id');
     // Get compotitiond details
+    this.mockService.getMockDetails(this.compotitionId);
+
 
   }
 
