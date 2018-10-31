@@ -1,3 +1,12 @@
-<div>
-    {{competitionId}}
+<div class="container">
+    <div style="text-align: center;padding-bottom: 10px">
+        <h1>{{comptitionDetails.competition.name}}</h1>
+        {{comptitionDetails.competition.title}} <br>
+       <b>End Time:</b>  {{comptitionDetails.competition.endTime}}
+    </div>
+    <div class="card-group">
+        <app-competing-photo></app-competing-photo>
+        <br>
+        <app-competing-photo></app-competing-photo>
+    </div>
 </div>

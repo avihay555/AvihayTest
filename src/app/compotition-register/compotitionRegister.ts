@@ -1,4 +1,4 @@
-import { PhotoCompetition } from '../compotition/photoCompotition';
+
 
 class CompetitionRegister {
 
@@ -28,21 +28,21 @@ class CompetitionRegister {
 
 
 
-    private _photoCompotitionId: PhotoCompetition;
-    public get photoCompotitionId(): PhotoCompetition {
-        return this._photoCompotitionId;
-    }
-    public set photoCompotitionId(v: PhotoCompetition) {
-        this._photoCompotitionId = v;
-    }
+    // private _photoCompotitionId: PhotoCompetition;
+    // public get photoCompotitionId(): PhotoCompetition {
+    //     return this._photoCompotitionId;
+    // }
+    // public set photoCompotitionId(v: PhotoCompetition) {
+    //     this._photoCompotitionId = v;
+    // }
 
 
 
-    private _isSuccessRegister: boolean;
-    public get isSucsessRegister(): boolean {
-        return this._isSuccessRegister;
-    }
-    public set isSuccessRegister(v: boolean) {
-        this._isSuccessRegister = v;
-    }
+    // private _isSuccessRegister: boolean;
+    // public get isSucsessRegister(): boolean {
+    //     return this._isSuccessRegister;
+    // }
+    // public set isSuccessRegister(v: boolean) {
+    //     this._isSuccessRegister = v;
+    // }
 }

@@ -1,4 +1,3 @@
-import { PhotoCompetition } from './compotition/photoCompotition';
 export class User {
     public constructor(init?: Partial<User>) {
         Object.assign(this, init);
@@ -18,14 +17,11 @@ export class User {
     public set id(v: number) {
         this._id = v;
     }
-
-    private _compotitionPhoto: PhotoCompetition;
-    public get compotitionPhoto(): PhotoCompetition {
-        return this._compotitionPhoto;
+    public getMockUser(): User {
+        return new User({ name: 'avihay', id: 12 });
     }
-    public set compotitionPhoto(v: PhotoCompetition) {
-        this._compotitionPhoto = v;
+    public getMockUsers(): Array<User> {
+        return new Array<User>(new User({ name: 'avihay', id: 12 }), new User({ name: 'roni', id: 15 }));
     }
-
 
 }

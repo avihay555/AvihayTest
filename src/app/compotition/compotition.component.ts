@@ -2,15 +2,16 @@ import { Component, OnInit, Input } from '@angular/core';
 import { interval, timer } from 'rxjs';
 import { Router } from '@angular/router';
 import { CompetitionMock } from './competittionMock';
-import { Competition } from '../competition';
-
+import { Competition } from '../competition1';
+import { NgLog } from '../log';
 
 @Component({
   selector: 'app-compotition',
   templateUrl: './compotition.component.html'
 })
+
 export class CompotitionComponent implements OnInit {
- compotition: Competition;
+  compotition: Competition;
   leftTime: string;
   constructor(private router: Router, private mock: CompetitionMock) {
     mock = new CompetitionMock();
@@ -19,13 +20,14 @@ export class CompotitionComponent implements OnInit {
 
   @Input()
   set compotitionId(_compotitionId: number) {
-    // getCompotiton(compotitionId)
+  //
   }
   ngOnInit() {
-    this.setTimer();
+   this.setTimer();
   }
   setTimer() {
-    interval(100).subscribe(() => {
+    interval(1000).subscribe((x) => {
+      console.log('observe input: ' + x.toString());
       const d = new Date();
       const leftDay = this.compotition.endTime.getDay() - d.getDay();
       const leftHour = this.compotition.endTime.getHours() - d.getHours();

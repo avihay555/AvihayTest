@@ -10,6 +10,7 @@ import { CompotitionComponent } from './compotition/compotition.component';
 import { CompotitionRegisterComponent } from './compotition-register/compotition-register.component';
 import { CompotitionsComponent } from './compotitions/compotitions.component';
 import { CompotitionDetailsComponent } from './competition-details/compotition-details.component';
+import { CompetingPhotoComponent } from './competing-photo/competing-photo.component';
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -25,7 +26,7 @@ const appRoutes: Routes = [
     BrowserModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true })
+      { enableTracing: false })
   ],
   declarations: [
     AppComponent,
@@ -35,7 +36,8 @@ const appRoutes: Routes = [
     CompotitionComponent,
     CompotitionRegisterComponent,
     CompotitionsComponent,
-    CompotitionDetailsComponent
+    CompotitionDetailsComponent,
+    CompetingPhotoComponent
   ],
   providers: [],
   bootstrap: [AppComponent]})

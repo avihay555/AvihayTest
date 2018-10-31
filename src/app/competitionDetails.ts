@@ -1,5 +1,6 @@
 import { User } from './user';
-import { Competition } from './competition';
+import { Competition } from './competition1';
+import { CompetingPhoto } from './competing-photo/competingPhoto';
 export class CompetitionDetails {
     public constructor(init?: Partial<CompetitionDetails>) {
         Object.assign(this, init);
@@ -12,15 +13,12 @@ export class CompetitionDetails {
         this._competition = v;
     }
 
-    private _competitors: User[];
-    public get competitors(): User[] {
-        return this._competitors;
+    private _photoCompetitions: Array<CompetingPhoto>;
+    public get photoCompetitions(): Array<CompetingPhoto> {
+        return this._photoCompetitions;
     }
-    public set competitors(v: User[]) {
-        this._competitors = v;
+    public set photoCompetitions(v: Array<CompetingPhoto>) {
+        this._photoCompetitions = v;
     }
-
-
-
 
 }

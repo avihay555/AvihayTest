@@ -1,0 +1,18 @@
+.img-user{
+    border-radius: 50%;
+    width: 50px; 
+    cursor: pointer; 
+}
+.card-img-top {
+    width: 100%;
+}
+.card-header{
+     text-align: center;
+}
+.heart-img{
+    cursor: pointer;
+}
+.card-footer{
+    text-align: center;
+}
+
